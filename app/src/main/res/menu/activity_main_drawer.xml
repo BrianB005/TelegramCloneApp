@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    tools:ignore="HardcodedText"
+    >
+
+
+    <group android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/new_group"
+            android:icon="@drawable/ic_baseline_nature_people_24"
+            android:title="New Group"
+           />
+        <item
+            android:id="@+id/contacts"
+            android:icon="@drawable/ic_outline_person_24"
+            android:title="Contacts"
+            />
+        <item
+            android:id="@+id/calls"
+            android:icon="@drawable/ic_outline_call_24"
+            android:title="Calls"
+            />
+        <item
+            android:id="@+id/nearby"
+            android:icon="@drawable/ic_baseline_nature_people_24"
+            android:title="People Nearby"
+            />
+        <item
+            android:id="@+id/book_mark"
+            android:icon="@drawable/ic_outline_bookmark_border_24"
+            android:title="Saved Messages"
+            />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_outline_settings_24"
+            android:title="Settings"
+            />
+
+
+    </group>
+    <group android:checkableBehavior="single"
+
+        >
+        <item
+            android:id="@+id/invite"
+            android:icon="@drawable/ic_outline_person_add_24"
+            android:title="Invite Friends"
+            />
+        <item
+            android:id="@+id/features"
+            android:icon="@drawable/ic_baseline_help_outline_24"
+            android:title="Telegram Features"
+            />
+    </group>
+</menu>

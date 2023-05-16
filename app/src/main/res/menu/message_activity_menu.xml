@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText"
+    >
+
+    <item app:showAsAction="ifRoom"
+        android:id="@+id/search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search" />
+
+    <group>
+        <item app:showAsAction="never"
+            android:id="@+id/mute"
+
+            android:visible="false"
+            android:title="Mute"
+            />
+    </group>
+
+    <group >
+
+        <item app:showAsAction="never"
+            android:id="@+id/un_mute"
+            android:title="Unmute"
+            />
+        <item app:showAsAction="never"
+            android:id="@+id/video_call"
+            android:title="Video Call"
+            />
+        <item app:showAsAction="ifRoom"
+            android:id="@+id/voice_call"
+            android:title="Voice call"
+            android:icon="@drawable/ic_baseline_call_24_white"
+            />
+        <item app:showAsAction="never"
+            android:id="@+id/set_wallpaper"
+            android:title="Set Wallpaper"
+            />
+        <item app:showAsAction="never"
+            android:id="@+id/clear_history"
+            android:title="Clear History"
+            />
+        <item app:showAsAction="never"
+            android:id="@+id/delete_chat"
+            android:title="Delete chat"
+            />
+    </group>
+
+
+</menu>

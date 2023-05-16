@@ -1,0 +1,119 @@
+
+<resources>
+
+
+<style name="Theme.Telegram" parent="Theme.MaterialComponents.NoActionBar">
+    <item name="colorPrimary">@color/black</item>
+    <item name="colorPrimaryVariant">@color/light_black</item>
+    <item name="colorOnPrimary">@color/extra_extra_light_gray</item>
+    <item name="android:textColorPrimary">@color/extra_extra_light_gray</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondary">@color/dark_gray</item>
+    <item name="colorSecondaryVariant">@color/black</item>
+    <item name="colorOnSecondary">@color/extra_extra_light_gray</item>
+    <item name="colorSurface">@color/black</item>
+    <item name="colorOnSurface">@color/extra_extra_light_gray</item>
+    <item name="colorAccent">@color/blue</item>
+    <item name="colorOutline">@color/extra_extra_light_gray</item>
+    <item name="itemBackground">?attr/colorPrimary</item>
+    <item name="android:colorBackground">?attr/colorPrimary</item>
+    <item name="windowActionBar">false</item>
+
+    <!-- Status bar color. -->
+    <item name="android:statusBarColor">?attr/colorPrimary</item>
+
+
+    <!-- Customize your theme here. -->
+    <item name="android:windowBackground">@color/black</item>
+
+    <item name="android:textColor">@color/extra_extra_light_gray</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:textSize">20sp</item>
+    <item name="fontFamily">sans-serif-medium</item>
+    <item name="itemIconTint">@color/extra_extra_light_gray</item>
+
+    <item name="android:windowActivityTransitions">true</item>
+    <item name="navigationViewStyle">@style/navigationViewStyle</item>
+</style>
+<style name="navigationViewStyle" parent="Widget.MaterialComponents.NavigationView">
+    <item name="android:background">?attr/colorPrimary</item>
+</style>
+<style name="whiteText">
+    <item name="android:textColor">@color/extra_extra_light_gray</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">18sp</item>
+</style>
+
+<style name="greyText">
+    <item name="android:textColor">@color/light_gray</item>
+    <item name="android:fontFamily">sans-serif-thin</item>
+    <item name="android:textSize">16sp</item>
+</style>
+<style name="blueText">
+    <item name="android:textColor">@color/blue</item>
+    <item name="android:fontFamily">sans-serif-black</item>
+    <item name="android:textSize">16sp</item>
+</style>
+
+<style name="whiteText.small">
+    <item name="android:textSize">15sp</item>
+</style>
+
+<style name="greyText.small">
+    <item name="android:textSize">14sp</item>
+</style>
+
+<style name="MyPopupMenu" parent="Widget.AppCompat.PopupMenu">
+    <item name="android:popupBackground">?attr/colorPrimary</item>
+</style>
+
+
+<style name="textMedium">
+    <item name="android:textSize">22sp</item>
+    <item name="android:textColor">@color/blue</item>
+
+</style>
+
+<!-- Style for keyboard row -->
+<style name="keyboard_row">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">0dp</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:gravity">center_horizontal|center_vertical</item>
+    <item name="android:showDividers">middle|end</item>
+
+</style>
+
+<!-- Style for keyboard number button -->
+<style name="keyboard_number_button">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    <item name="android:gravity">center_horizontal|center_vertical</item>
+    <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    <item name="android:textColor">@color/extra_extra_light_gray</item>
+    <item name="android:tag">number_button</item>
+</style>
+
+<!-- Style for keyboard button -->
+<style name="keyboard_button">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    <item name="android:gravity">center_horizontal|center_vertical</item>
+    <item name="android:textColor">@color/black</item>
+</style>
+
+<!--    <style name="Theme.Telegram.NoActionBar">-->
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+<!--    </style>-->
+
+<!--<style name="Theme.Telegram.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+
+<style name="Theme.Telegram.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
+
