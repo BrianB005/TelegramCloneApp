@@ -5,6 +5,7 @@ import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.cardview.widget.CardView
@@ -24,6 +25,9 @@ class MessagesRVAdapter(private val context: Context,private val messages:ArrayL
         val date:TextView=view.findViewById(R.id.date)
         val title: TextView =view.findViewById(R.id.title)
         val time: TextView =view.findViewById(R.id.time)
+        val read: TextView =view.findViewById(R.id.read)
+        val sent: TextView =view.findViewById(R.id.sent)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -55,14 +59,26 @@ class MessagesRVAdapter(private val context: Context,private val messages:ArrayL
 
         if (isDifferentDay){
             holder.dateWrapper.visibility=View.VISIBLE
-            holder.date.text=ConvertToDate.getDateAgo(message.createdAt)!!
+            holder.date.text=ConvertToDate.getDateAgo(message.createdAt)
+        }
+        if(holder.itemViewType==0){
+            holder.itemView.startAnimation(AnimationUtils.loadAnimation(context,R.anim.right_in))
+            if (message.isRead){
+                holder.read.visibility=View.VISIBLE
+                holder.sent.visibility=View.GONE
+            }else{
+                holder.read.visibility=View.GONE
+                holder.sent.visibility=View.VISIBLE
+            }
+        }else{
+            holder.itemView.startAnimation(AnimationUtils.loadAnimation(context,R.anim.left_in))
         }
     }
 
 
     override fun getItemViewType(position: Int): Int {
         val userId = MyPreferences.getItemFromSP(context, "userId")
-        return if (messages[position].sender==(userId)) 0 else 1
+        return if (messages[position].sender.userId==(userId)) 0 else 1
     }
     override fun getItemCount(): Int {
         return messages.size

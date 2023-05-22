@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:ignore="HardcodedText"
+    android:layout_height="match_parent"
+    tools:context=".ChannelActivity">
+
+    <include
+        layout="@layout/message_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:layout_above="@+id/input"
+        android:layout_below="@+id/toolbar"
+        android:paddingHorizontal="10dp"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/progress"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimaryVariant"
+        android:text="Join"
+        android:id="@+id/join"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:paddingVertical="10dp"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/input"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/send"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:focusable="true"
+            android:padding="4dp"
+            android:clickable="true"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:drawableStartCompat="@drawable/ic_baseline_send_24" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="10dp"
+
+            android:background="?attr/colorPrimaryVariant"
+
+
+
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:id="@+id/show_emojis"
+                app:drawableStartCompat="@drawable/ic_baseline_emoji_emotions_24" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"
+                android:hint="Broadcast Message"
+                android:background="@android:color/transparent"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="17sp"
+                android:id="@+id/message_input"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:id="@+id/attach"
+                app:drawableStartCompat="@drawable/ic_baseline_attachment_24" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:id="@+id/voice_note"
+                app:drawableStartCompat="@drawable/ic_baseline_keyboard_voice_24" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

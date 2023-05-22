@@ -3,6 +3,7 @@ package com.brianbett.telegram.adapters
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,6 +16,9 @@ import com.brianbett.telegram.MyPreferences
 
 import com.brianbett.telegram.databinding.SingleUserBinding
 import com.brianbett.telegram.retrofit.UserDetails
+import com.bumptech.glide.Glide
+import com.google.android.gms.tasks.Task
+import com.google.firebase.storage.FirebaseStorage
 
 
 class UsersRVAdapter(private val users:List<UserDetails>, val context:Context) :RecyclerView.Adapter<UsersRVAdapter.MyViewHolder>(){
@@ -49,6 +53,12 @@ class UsersRVAdapter(private val users:List<UserDetails>, val context:Context) :
             intent.putExtra("recipient",user.userId)
             intent.putExtra("phone",user.phoneNumber)
             context.startActivity(intent)
+        }
+        val storageReference = FirebaseStorage.getInstance()
+            .getReference("images/${user.profilePic}")
+        val uriTask: Task<Uri> = storageReference.downloadUrl
+        uriTask.addOnSuccessListener { uri1: Uri? ->
+            Glide.with(context).load(uri1).into(holder.profilePic)
         }
 
 

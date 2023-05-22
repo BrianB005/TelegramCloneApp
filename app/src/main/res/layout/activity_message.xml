@@ -23,11 +23,12 @@
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:id="@+id/progress"
         android:layout_centerInParent="true"
         android:visibility="gone"
         />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,6 +37,9 @@
         android:layout_alignParentBottom="true"
         android:background="@android:color/transparent"
         >
+
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +57,7 @@
             android:layout_height="wrap_content"
             android:paddingVertical="8dp"
             android:paddingHorizontal="10dp"
-            android:background="@color/light_black"
+            android:background="?attr/colorPrimaryVariant"
 
 
             >
@@ -76,7 +80,8 @@
                 android:hint="Message"
                 android:background="@android:color/transparent"
                 android:textColorHint="@color/dark_gray"
-                style="@style/greyText"
+
+                android:textSize="17sp"
                 android:id="@+id/message_input"
                 />
             <TextView

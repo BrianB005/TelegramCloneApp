@@ -11,12 +11,10 @@
     android:background="?attr/selectableItemBackground"
 
     >
-
-
     <androidx.cardview.widget.CardView
-        android:layout_width="70dp"
+        android:layout_width="50dp"
         app:cardCornerRadius="50dp"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         >
         <ImageView
             android:id="@+id/profile_pic"
@@ -24,7 +22,7 @@
             android:layout_height="match_parent"
             android:contentDescription="profile"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/image3"
+
 
             />
     </androidx.cardview.widget.CardView>

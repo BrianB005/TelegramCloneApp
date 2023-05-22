@@ -79,7 +79,6 @@ class ConvertToDate {
             val today = Calendar.getInstance()
             val yesterday = Calendar.getInstance()
             yesterday.add(Calendar.DAY_OF_YEAR, -1)
-
             val dateFormat = SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.getDefault())
 
             val dateString = dateFormat.format(date)
